@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<script>
+/*1. Создать функцию, возводящую число в степень,
+ число и сама степень вводится пользователем
+*/
+function bas () {
+	x = +prompt();
+	y = +prompt();
+	res = Math.pow(x , y);
+	document.write(res);
+}
+bas();
+
+
+/*
+2. Cделайте функцию, которая принимает параметром 
+число от 1 до 7, а возвращает день недели на русском языке. 
+Показать решение.*/
+
+function day () {
+	var numb = +prompt();
+	(numb === 1) ? alert('Понедельник'): 
+	(numb === 2) ? alert('Вторник'):
+	(numb === 3) ? alert('Среда'):
+	(numb === 4) ? alert('Четверг'):
+	(numb === 5) ? alert('Пятница'):
+	(numb === 6) ? alert('Суббота'):
+	(numb === 7) ? alert('Воскресенье'):
+	alert('Ошибка');
+}
+day();
+
+
+/*
+3. Добавьте пару параграфов на страницу. 
+Напишите функцию, которая выделяет все 
+параграфы на странице красным цветом фона.*/
+
+window.onload = function(){
+
+var paragr = function(){
+	var articleDiv = document.querySelector("body");
+	var elem = document.createElement("p");
+	var elemText = document.createTextNode("Привет мир");
+	elem.style.backgroundColor = 'red';
+	elem.appendChild(elemText);
+	articleDiv.appendChild(elem);
+};
+paragr();
+
+}
+
+
+/* 
+4. Функция принимает параметр - возраст пользователя. 
+Если число больше 16 – то выводим «добро пожаловать»,
+ если меньше – “вы еще молоды”.
+*/
+
+function age () {
+	var x = +prompt();
+	(x > 16) ? alert('Добро пожаловать') : alert('Вы еще молоды');
+}
+age();
+
+
+/*
+5. Создайте функцию, которая считает длину 
+массива и возвращает ее в виде числа. 
+Массив в функцию передается как аргумент.
+Если аргумент не задан – выводится сообщение об ошибке.*/
+
+var arr = [1, 5, 50, 1, 1, 1, 1];
+
+function ara (arry) {
+	document.write(arry.length);
+}
+ara(arr);
+
+
+
+
+
+	</script>
+</head>
+<body>
+</body>
+</html>

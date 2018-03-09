@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script>
+	var words = [
+		"проводник",
+		"браузер",
+		"секретарь",
+		"экология",
+		"журнал"];
+	//выбор случайного слова
+	var word = words[Math.floor(Math.random()*words.length)];
+	
+	//создаем массив
+	var wer = [];
+	for (var i = 0; i < word.length; i++){
+		wer[i] = '[]';
+	}
+	var main = word.length;
+	//программируем игровой цикл
+	while (main > 0) {
+		alert(wer.join(""));
+
+		var guess = prompt("Угадайте букву или нажмите отмена для выхода из игры");
+		if (guess === null) {
+			break;
+		} else if (guess.length !==1) {
+			alert("Пожалуйста, введите только одну букву.");
+		} else {
+			for (var j = 0; j < word.length; j++) {
+				if (word[j] === guess) {
+					wer[j] = guess;
+					main--;
+				}
+			}
+		}
+	}
+	alert(wer.join(" "));
+	alert(" Отлично! Было загадано слово " + word);
+
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script>
+/*
+1. Создать объект Point, содержащий два свойства: "x" и "y" — координаты точки, 
+и метод GetQuadrant, вычисляющий,
+в каком квадранте в декартовой системе координат находится данная точка.
+    Протестируйте данный объект, изменяя значения его координат, 
+    и повторно вызавая метод GetQuadrant.*/
+
+var Point = {
+	x: 10,
+	y: 5,
+	GetQuadrant: function () {     // Создание метода
+		A = 'A ' + '(' + Point.x + ', ' + Point.y + ')';
+		document.write(A);
+	}
+};
+
+Point.GetQuadrant();
+
+
+/*
+2. Создать объект Calculator, который должен содержать
+методы для расчета суммы, разности, произведения и частного двух чисел.
+Протестировать данный объект, принимая от пользователя значения двух операндов и знак операции.
+В зависимости от принятого знака операции, вызвать соответствующий метод.*/
+
+var cal = {
+	a : +prompt('Enter first number'),
+	b : +prompt('Enter second number'),
+	c : prompt('+  -  /  *'),
+	calculat: function (a, b, c) {
+		(c == '+') ? alert(a + b):
+		(c == '-') ? alert(a - b):
+		(c == '*') ? alert(a * b):
+		(c == '/') ? alert(a / b):
+		alert('Error'); 
+	}
+};
+cal.calculat(cal.a, cal.b, cal.c);
+
+
+/*
+3. Создать массив, который будет хранить в себе информацию 
+о сотрудниках предприятия. Каждый элемент масива — объект,
+содержащий свойства: name, sName, age, occupation, 
+и метод show, который выводит всю информацию о пользователе.
+       Реализовать заполнение массива пользователем. 
+       По окончанию заполнения — вывести информацию о сотрудниках.*/
+
+
+var person = {};
+
+person[0] = {
+	name : prompt('Name'),
+	sName : prompt('sName'),
+	age : prompt('age'),
+	occupation : prompt('occupation')
+}
+
+person[1] = {
+	name : prompt('Name'),
+	sName : prompt('sName'),
+	age : prompt('age'),
+	occupation : prompt('occupation')
+}
+
+person.show = function () {
+		console.log(person[0]);
+		console.log(person[1]);
+}
+person.show();
+
+
+/*\
+4. Для предыдущего задания создайте функцию, 
+которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
+будет добавлять новое свойство "salary", хранящее зарплату сотрудника. 
+
+Зарплата расчитывается, исходя из значения свойства "occupation" следующим образом:
+   • "director" — 3000;
+   • "manager" — 1500;
+   • "programmer" — 2000;
+   • для остальных значений — 1000.
+После выполнения функции — вывести информацию о сотрудниках.*/
+
+
+var person = {};
+
+person[0] = {
+	name : prompt('Name'),
+	sName : prompt('sName'),
+	age : prompt('age'),
+	occupation : prompt('occupation'),
+	salary : {
+		director : ''
+	}
+}
+
+person[1] = {
+	name : prompt('Name'),
+	sName : prompt('sName'),
+	age : prompt('age'),
+	occupation : prompt('occupation'),
+	salary : {
+		manager : ''
+	}
+}
+
+person[2] = {
+	name : prompt('Name'),
+	sName : prompt('sName'),
+	age : prompt('age'),
+	occupation : prompt('occupation'),
+	salary : {
+		programmer : ''
+	}
+}
+
+function salary () {
+	(person[0].occupation == 'director') ? console.log(person[0],person[0].salary.director = 3000) :
+	(person[0].occupation == 'manager') ? console.log(person[0],person[0].salary.manager = 1500) :
+	(person[0].occupation == 'programmer') ? console.log(person[0],person[0].salary.programmer = 2000) :
+	console.log(person[0],person[0].salary.other = 1000);
+
+	(person[1].occupation == 'director') ? console.log(person[1],person[1].salary.director = 3000) :
+	(person[1].occupation == 'manager') ? console.log(person[1],person[1].salary.manager = 1500) :
+	(person[1].occupation == 'programmer') ? console.log(person[1],person[1].salary.programmer = 2000) :
+	console.log(person[1],person[1].salary.other = 1000);
+
+	(person[2].occupation == 'director') ? console.log(person[2],person[2].salary.director = 3000) :
+	(person[2].occupation == 'manager') ? console.log(person[2],person[2].salary.manager = 1500) :
+	(person[2].occupation == 'programmer') ? console.log(person[2],person[2].salary.programmer = 2000) :
+	console.log(person[2],person[2].salary.other = 1000);
+
+}
+salary()
+
+
+/*
+5. Для задания 3 создать метод, позволяющий отсортировать 
+массив сотрудников по одному из свойств: name, sName, age, occupation, salary.
+       Параметр для сортировки принимается от пользователя.
+       После выполнения функции — вывести информацию о сотрудниках.
+*/
+
+var person = {};
+
+person[0] = {
+	name : prompt('Name'),
+	sName : prompt('sName'),
+	age : prompt('age'),
+	occupation : prompt('occupation'),
+	salary : {
+		director : ''
+	}
+}
+person[1] = {
+	name : prompt('Name'),
+	sName : prompt('sName'),
+	age : prompt('age'),
+	occupation : prompt('occupation'),
+	salary : {
+		manager : ''
+	}
+}
+person[2] = {
+	name : prompt('Name'),
+	sName : prompt('sName'),
+	age : prompt('age'),
+	occupation : prompt('occupation'),
+	salary : {
+		programmer : ''
+	}
+}
+
+person.sor = function () {
+	for (i = 0; i < person; i++){
+		console.log(person[i]);
+	}
+}
+
+person.sor()
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

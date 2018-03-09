@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+</head>
+<body>
+	<p><img id="img"  src="55.jpg" style="width: 250px; display: none;" ></p>
+	<input value="Нажми меня" id="input" type="button">
+
+
+	<script>
+		
+
+		/* 
+1. У вас есть форма с кнопкой и элемент параграф (тег p)…
+Нажав на кнопку у вас в параграфе появляется какая то картинка
+*/
+
+document.getElementById('input').onclick = function() {
+	document.getElementById('img').style.display = 'block';
+
+}
+	</script>
+</body>
+</html>
